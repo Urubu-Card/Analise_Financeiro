@@ -5,7 +5,6 @@ from colorama import Fore
 import pandas as pd
 
 
-
 def Mudar_Numeros(valor):
 
     return "{:,.2f}".format(valor).replace(',', 'v').replace('.', ',').replace('v', '.')
@@ -160,7 +159,6 @@ class Busca:
 
         print(F"Saldo total do ano: R${Mudar_Numeros(somaanual)}")
 
-
 class App:
 
 
@@ -195,9 +193,7 @@ class App:
 
         keyboard.wait("g")
 
-
 app = App()
 
 app.Rodar()
-
 
