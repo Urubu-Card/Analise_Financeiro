@@ -2,9 +2,8 @@ import csv
 import os
 import keyboard
 from colorama import Fore
-import pandas as pd
-
-
+#import pandas as pd
+from datetime import datetime as datatime
 
 def Mudar_Numeros(valor):
 
@@ -18,23 +17,23 @@ class Arquivos:
 
         linhasvazias = 0
         for linha in dados:
+            data_str = linha.get('data', '').strip()
+            valor_str = linha.get('valor', '').strip()
 
-            try:
-                tranformarnum = float(linha['valor'])
-
-            except ValueError:
-                linhasvazias +=1
+            if not data_str or not valor_str:
+                linhasvazias += 1
                 continue
 
-            if linha['valor'] == '' :
-                linhasvazias +=1
+            try:
+                data = datatime.strptime(data_str, "%Y-%m-%d")
+                valor = float(valor_str)
+                
+            except ValueError:
+                linhasvazias += 1
+                continue
 
-            elif linha['data'] == '' or  "-" not in linha['data'] :
-                linhasvazias +=1
+            dadosbons.append(linha)
 
-        
-            else:
-                dadosbons.append(linha)
 
         print(f"{linhasvazias} Linhas vazias ou erradas")
 
@@ -80,9 +79,13 @@ class Busca:
 
         valores = []
 
+        
+
         for linha in self.dados:
 
-            if int(linha['data'].split("-")[1]) == nummes:
+            data = datatime.strptime(linha['data'],"%Y-%m-%d")
+
+            if data.month == nummes:
 
                 valores.append(float(linha['valor']))
 
@@ -160,7 +163,6 @@ class Busca:
 
         print(F"Saldo total do ano: R${Mudar_Numeros(somaanual)}")
 
-
 class App:
 
 
@@ -181,23 +183,19 @@ class App:
 
             print(f"{Fore.RESET} {mes} : ")
 
-            self.busca.Mostrar_Receita(mescontagem)
+            #self.busca.Mostrar_Receita(mescontagem)
 
-            self.busca.Mostrar_Despesas(mescontagem)
+            #self.busca.Mostrar_Despesas(mescontagem)
 
             self.busca.Mostrar_Saldo(mescontagem)
 
-            
 
             print(Fore.WHITE+"------------------")
             mescontagem += 1
-        self.busca.RankSaldos()
+        #self.busca.RankSaldos()
 
         keyboard.wait("g")
-
 
 app = App()
 
 app.Rodar()
-
-
