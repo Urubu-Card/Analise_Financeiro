@@ -1,167 +1,5 @@
-import csv
-import os
-import keyboard
-from colorama import Fore
-#import pandas as pd
-from datetime import datetime as datatime
-
-def Mudar_Numeros(valor):
-
-    return "{:,.2f}".format(valor).replace(',', 'v').replace('.', ',').replace('v', '.')
-
-class Arquivos:
-
-    def VerificarDados(self,dados):
-
-        dadosbons = []
-
-        linhasvazias = 0
-        for linha in dados:
-            data_str = linha.get('data', '').strip()
-            valor_str = linha.get('valor', '').strip()
-
-            if not data_str or not valor_str:
-                linhasvazias += 1
-                continue
-
-            try:
-                data = datatime.strptime(data_str, "%Y-%m-%d")
-                valor = float(valor_str)
-                
-            except ValueError:
-                linhasvazias += 1
-                continue
-
-            dadosbons.append(linha)
-
-
-        print(f"{linhasvazias} Linhas vazias ou erradas")
-
-        return dadosbons
-
-
-
-    def Abrir_Arquivos(self,):
-
-        caminho = os.path.join(os.path.dirname(__file__), "..", "data")
-
-
-        dados = []
-
-        for arquivo in os.listdir(caminho):
-
-            with open(rf"{caminho}\{arquivo}",newline="",encoding='utf-8') as csvfile:
-
-                leitor = csv.DictReader(csvfile)
-
-                for linha in leitor:
-                    dados.append(linha)
-
-        dadosbons = self.VerificarDados(dados)
-
-        return dadosbons
-
-
-class Busca:
-
-    def __init__(self,):
-        
-        self.arquivos = Arquivos()
-        self.dados = self.arquivos.Abrir_Arquivos()
-        self.meses = [
-                'Janeiro', 'Fevereiro', 'Março', 'Abril', 
-                'Maio', 'Junho', 'Julho', 'Agosto', 
-                'Setembro', 'Outubro', 'Novembro', 'Dezembro'
-        ]
-
-
-    def Mostrar_Saldo (self,nummes):
-
-        valores = []
-
-        
-
-        for linha in self.dados:
-
-            data = datatime.strptime(linha['data'],"%Y-%m-%d")
-
-            if data.month == nummes:
-
-                valores.append(float(linha['valor']))
-
-        soma= sum(valores)
-
-        print(Fore.YELLOW+f"O Saldo do Final do mês foi de: R$ {Mudar_Numeros(soma)}")
-
-    def Mostrar_Receita(self,numes):
-
-        valores = []
-
-        for linha in self.dados :
-
-            if int(linha['data'].split("-")[1]) == numes:
-
-                if float(linha['valor']) > 0:
-                    valores.append(float(linha['valor']))
-        
-
-        soma= sum(valores)
-
-        print(Fore.GREEN+f"O Valor da Receita do mês foi de: R$ {Mudar_Numeros(soma)}")
-
-    def Mostrar_Despesas(self,numes):
-
-        valores = []
-
-        for linha in self.dados:
-
-            if int(linha['data'].split("-")[1]) == numes:
-
-                if float(linha['valor']) < 0:
-                    valores.append(float(linha['valor']))
-        
-
-        soma= sum(valores)
-
-        print(Fore.RED+f"O Valor da Despesa do mês foi de: R$ {Mudar_Numeros(soma)}")
-
-    def RankSaldos(self):
-
-        resultados = {}
-
-        mescontagem = 1
-        for mes in self.meses:
-
-            soma_do_mes = []
-
-            for linha in self.dados:
-
-                if int(linha['data'].split("-")[1]) == mescontagem:
-
-                    soma_do_mes.append(float(linha['valor']))
-            
-            soma_saldo = sum(soma_do_mes)
-            mescontagem += 1
-
-
-
-            resultados[mes] = soma_saldo
-
-        
-        maiorvalor=max(resultados, key=resultados.get)
-        
-        piorvalor = min(resultados,key=resultados.get)
-
-        
-        somaanual = sum(resultados.values())
-
-        print("RESUMO ANUAL :")
-
-        print(f"O mês com o maior saldo foi: {maiorvalor} (R${Mudar_Numeros(resultados[maiorvalor])})")
-
-        print(f"O mês com o pior saldo foi: {piorvalor} (R${Mudar_Numeros(resultados[piorvalor])})")
-
-        print(F"Saldo total do ano: R${Mudar_Numeros(somaanual)}")
+from questionary import Style , questionary
+import data
 
 class App:
 
@@ -173,29 +11,76 @@ class App:
                 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
         ]
 
-        self.busca = Busca()
+        self.busca = data.Busca()
+
+    def Menu(self):
+        opcoes = ["[1] Adicionar dados",
+                  "[2] Mostrar tabela",
+                  "[3] Mostrar Rank",""
+                  "[4] Abrir Log de erros",
+                  "[5] Sair"]
+
+        
+        custom_style = Style([
+
+            ('highlighted', 'fg:#673ab7 bold'), # opção selecionada
+            ('selected', 'fg:#cc5454'),         # opção escolhida
+            
+        ])
+
+        escolha = questionary.select("Esolha uma opção :",
+                                    choices=opcoes,
+                                    style=custom_style,
+                                    instruction="(utilize as setas)",
+                                    
+                                    ).ask()
+
+        return escolha
 
     def Rodar(self,):
 
+        while True:
+            escolha = self.Menu()
 
-        mescontagem = 1 
-        for mes in self.meses:
 
-            print(f"{Fore.RESET} {mes} : ")
+
+            if escolha == "[2] Mostrar tabela":
+
+                self.busca.Tabela()
+                menures = questionary.select(
+                    "Deseja voltar ao Menu?",
+                    choices=[
+                        "Sim",
+                        "Não", ]).ask()
+        
+                if menures == "Sim":
+                    continue
+                else:
+                    break
+
+            elif escolha =="[4] Abrir Log de erros":
+                break
+
+            elif escolha =="[5] Sair":
+                break
+
+app = App()
+
+app.Rodar()
+
+
+
+#mescontagem = 1 
+        #for mes in self.meses:
+
+            #print(f"{Fore.RESET} {mes} : ")
 
             #self.busca.Mostrar_Receita(mescontagem)
 
             #self.busca.Mostrar_Despesas(mescontagem)
 
-            self.busca.Mostrar_Saldo(mescontagem)
+            #self.busca.Mostrar_Saldo(mescontagem)
 
-
-            print(Fore.WHITE+"------------------")
-            mescontagem += 1
+            #print(Fore.WHITE+"------------------")
+            #mescontagem += 1
         #self.busca.RankSaldos()
-
-        keyboard.wait("g")
-
-app = App()
-
-app.Rodar()
