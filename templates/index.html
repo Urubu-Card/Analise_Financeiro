@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Análise Financeira💰</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 </head>
 <body>
     <div class="rank">
@@ -16,5 +17,35 @@
         <p>Saldo total do ano: R${{rank_anual['Soma_Anual']}} </p>
 
     </div>
+
+    <div class="tabela">
+        <table>
+            <thead>
+                <tr>
+                    <th>Mês</th>
+                    <th>Saldo</th>
+                    <th>Receita</th>
+                    <th>Despesas</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for linha in tabela %}
+                <tr>
+                    <td>{{ linha.mes }}</td>
+                    <td>{{ "%.2f"|format(linha.saldo) }}</td>
+                    <td>{{ "%.2f"|format(linha.receita) }}</td>
+                    <td>{{ "%.2f"|format(linha.despesa) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

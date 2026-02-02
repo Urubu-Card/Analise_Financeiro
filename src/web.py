@@ -15,7 +15,9 @@ def home():
 
     rank = app.RankSaldos()
 
-    return render_template("index.html", rank_anual= rank)
+    tabela , nao_usar = app.Tabela()
+
+    return render_template("index.html", rank_anual= rank , tabela = tabela)
 
 if __name__ == "__main__":
     app.run(debug=True)

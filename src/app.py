@@ -13,10 +13,21 @@ class App:
 
         self.busca = data.Busca()
 
+    def PrintRank(self,):
+        rank = self.busca.RankSaldos()
+
+        print("RESUMO ANUAL :")
+
+        print(f"O mês com o maior saldo foi: {rank['Maior_Valor'][0]} (R${rank['Maior_Valor'][1]})")
+
+        print(f"O mês com o pior saldo foi: {rank['Pior_Valor'][0]} (R${rank['Pior_Valor'][1]})")
+
+        print(F"Saldo total do ano: R${rank['Soma_Anual']}")
+
     def Menu(self):
         opcoes = ["[1] Adicionar dados",
                     "[2] Mostrar tabela",
-                    "[3] Mostrar Rank",""
+                    "[3] Mostrar Rank",
                     "[4] Abrir Log de erros",
                     "[5] Sair"
                 ]
@@ -38,6 +49,15 @@ class App:
 
         return escolha
 
+    def Voltar_Menu(self,):
+        menuresposta = questionary.select(
+                    "Deseja voltar ao Menu?",
+                    choices=[
+                        "Sim",
+                        "Não", ]).ask()
+        
+        return menuresposta
+
     def Rodar(self,):
 
         while True:
@@ -45,20 +65,25 @@ class App:
 
 
 
-            if escolha == "[2] Mostrar tabela":
+            if escolha ==   "[2] Mostrar tabela":
 
                 self.busca.Tabela()
-                menures = questionary.select(
-                    "Deseja voltar ao Menu?",
-                    choices=[
-                        "Sim",
-                        "Não", ]).ask()
+                menuresp = self.Voltar_Menu()
         
-                if menures == "Sim":
+                if menuresp == "Sim":
                     continue
                 else:
                     break
-
+            
+            elif escolha==  "[3] Mostrar Rank":
+                self.PrintRank()
+                menuresp = self.Voltar_Menu()
+        
+                if menuresp == "Sim":
+                    continue
+                else:
+                    break
+            
             elif escolha =="[4] Abrir Log de erros":
                 break
 

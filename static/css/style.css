@@ -4,7 +4,7 @@
     
     font-family: "Playwrite NZ Basic", cursive;
     font-weight: 200;
-    color: white;
+    color: #ffffff;
     font-size: 1,5rem;
 }
 .rank{
@@ -12,6 +12,15 @@
     border-radius: 10px;
     margin: 0 auto;
     text-align: center;
+    width: 50%;
+    
+}
+
+.tabela{
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0 auto;
+    align-items: center;
     width: 50%;
     
 }

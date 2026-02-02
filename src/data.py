@@ -111,20 +111,16 @@ class Busca:
                 "Soma_Anual":   Mudar_Numeros(somaanual)
                 }
 
-        #print("RESUMO ANUAL :")
 
-        #print(f"O mês com o maior saldo foi: {maiorvalor} (R${Mudar_Numeros(resultados[maiorvalor])})")
-
-        #print(f"O mês com o pior saldo foi: {piorvalor} (R${Mudar_Numeros(resultados[piorvalor])})")
-
-        #print(F"Saldo total do ano: R${Mudar_Numeros(somaanual)}")
         return rank
 
     def Tabela(self):
         
         labe = ['Saldo',"Receita","Despessas"]
 
-        valores_tabela = []
+        valores_tabela_html = []
+
+        valores_tabela_terminal = []
 
         for i in range(1,13):
             saldo_mes = 0
@@ -142,10 +138,15 @@ class Busca:
                     else:
                         despesa_mes += valor
 
-            valores_tabela.append([saldo_mes, receita_mes, despesa_mes])
+            valores_tabela_html.append({
+            'mes': self.meses[i-1],
+            'saldo': saldo_mes,
+            'receita': receita_mes,
+            'despesa': despesa_mes
+        })
 
+            valores_tabela_terminal.append([saldo_mes, receita_mes, despesa_mes])
 
-
-        df = pd.DataFrame(valores_tabela,columns=labe,index=self.meses)
-        print(df.map(Mudar_Numeros))
+        #df = pd.DataFrame(valores_tabela,columns=labe,index=self.meses)
+        return valores_tabela_html, valores_tabela_terminal
 

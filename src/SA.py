@@ -52,9 +52,10 @@ class Arquivos:
 
         data_atual = datatime.now().strftime("%d/%m/%Y %H:%M:%S")
 
-        with open(caminho_log, "a", encoding="utf-8") as arquivo:
-            arquivo.write(f"ERRO - {mensagem} - {data_atual}\n")
+        with open(caminho_log, "r+", encoding="utf-8") as arquivo:
 
+            if f"ERRO - {mensagem} " not in arquivo.read():
+                arquivo.write(f"ERRO - {mensagem} \n")
 
     def Abrir_Arquivos(self,):
 
