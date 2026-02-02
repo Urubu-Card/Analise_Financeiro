@@ -15,10 +15,11 @@ class App:
 
     def Menu(self):
         opcoes = ["[1] Adicionar dados",
-                  "[2] Mostrar tabela",
-                  "[3] Mostrar Rank",""
-                  "[4] Abrir Log de erros",
-                  "[5] Sair"]
+                    "[2] Mostrar tabela",
+                    "[3] Mostrar Rank",""
+                    "[4] Abrir Log de erros",
+                    "[5] Sair"
+                ]
 
         
         custom_style = Style([

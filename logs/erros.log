@@ -1,1 +1,109 @@
 
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:07:34
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:07:34
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:07:34
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:07:34
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:07:34
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:07:35
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:07:58
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:07:58
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:07:58
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:07:58
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:07:58
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:07:58
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:08:35
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:08:35
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:08:35
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:08:35
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:08:35
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:08:35
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:08:43
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:08:43
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:08:43
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:08:43
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:08:43
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:08:43
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:09:11
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:09:11
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:09:11
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:09:11
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:09:11
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:09:11
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:09:40
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:09:40
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:09:40
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:09:40
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:09:40
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:09:40
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:09:43
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:09:43
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:09:43
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:09:43
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:09:43
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:09:43
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:17:23
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:17:23
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:17:23
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:17:23
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:17:23
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:17:23
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:17:24
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:17:24
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:17:24
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:17:24
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:17:24
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:17:24
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:20:01
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:01
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:01
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:20:01
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:20:01
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:20:01
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:20:07
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:07
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:07
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:20:07
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:20:07
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:20:07
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:20:11
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:11
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:11
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:20:11
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:20:11
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:20:11
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:20:15
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:15
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:15
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:20:15
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:20:15
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:20:15
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:20:17
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:17
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:17
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:20:17
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:20:17
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:20:17
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:20:21
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:21
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:22
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:20:22
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:20:22
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:20:22
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:20:24
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:24
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:24
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:20:24
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:20:24
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:20:24
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:20:24
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:24
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:20:24
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:20:24
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:20:24
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:20:24
+ERRO - Linha 56 está com campo vazio: {'data': '2025-12-30', 'descricao': 'ab', 'categoria': 'xd', 'valor': ''} - 02/02/2026 09:21:04
+ERRO - Linha 57 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abc', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:21:04
+ERRO - Linha 58 está com campo vazio: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': ''} - 02/02/2026 09:21:04
+ERRO - Linha 59 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abcd'} - 02/02/2026 09:21:04
+ERRO - Linha 60 com valor/data inválido: {'data': '2025-12-30', 'descricao': 'abcd', 'categoria': 'xdd', 'valor': 'abc'} - 02/02/2026 09:21:04
+ERRO - Linha 61 com valor/data inválido: {'data': '67676767', 'descricao': 'sixseven', 'categoria': 'nobnalls', 'valor': '67.67'} - 02/02/2026 09:21:04

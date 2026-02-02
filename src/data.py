@@ -53,7 +53,8 @@ class Busca:
 
         soma= sum(valores)
 
-        print(Fore.GREEN+f"O Valor da Receita do mês foi de: R$ {Mudar_Numeros(soma)}")
+        #print(Fore.GREEN+f"O Valor da Receita do mês foi de: R$ {Mudar_Numeros(soma)}")
+        return Mudar_Numeros(soma)
 
     def Mostrar_Despesas(self,numes):
 
@@ -105,13 +106,16 @@ class Busca:
         
         somaanual = sum(resultados.values())
 
-        print("RESUMO ANUAL :")
+        rank = {f"Pior_Valor": {Mudar_Numeros(piorvalor)},"Maior_Valor":{Mudar_Numeros(maiorvalor)},"Soma_Anaul":{Mudar_Numeros(somaanual)}}
 
-        print(f"O mês com o maior saldo foi: {maiorvalor} (R${Mudar_Numeros(resultados[maiorvalor])})")
+        #print("RESUMO ANUAL :")
 
-        print(f"O mês com o pior saldo foi: {piorvalor} (R${Mudar_Numeros(resultados[piorvalor])})")
+        #print(f"O mês com o maior saldo foi: {maiorvalor} (R${Mudar_Numeros(resultados[maiorvalor])})")
 
-        print(F"Saldo total do ano: R${Mudar_Numeros(somaanual)}")
+        #print(f"O mês com o pior saldo foi: {piorvalor} (R${Mudar_Numeros(resultados[piorvalor])})")
+
+        #print(F"Saldo total do ano: R${Mudar_Numeros(somaanual)}")
+        return rank
 
     def Tabela(self):
         
@@ -137,7 +141,7 @@ class Busca:
 
             valores_tabela.append([saldo_mes, receita_mes, despesa_mes])
 
-       
+
 
         df = pd.DataFrame(valores_tabela,columns=labe,index=self.meses)
         print(df.map(Mudar_Numeros))

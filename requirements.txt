@@ -1,5 +1,5 @@
 csv ==1.0
 colorama == 0.4.6
-pandas==2.2.3p
+pandas==2.2.3
 
 python==3.13.1
