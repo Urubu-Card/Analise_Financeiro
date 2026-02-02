@@ -15,8 +15,7 @@ def home():
 
     rank = app.RankSaldos()
 
-
-    return render_template("index.html", rank_anual= {rank})
+    return render_template("index.html", rank_anual= rank)
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -106,7 +106,10 @@ class Busca:
         
         somaanual = sum(resultados.values())
 
-        rank = {f"Pior_Valor": {Mudar_Numeros(piorvalor)},"Maior_Valor":{Mudar_Numeros(maiorvalor)},"Soma_Anaul":{Mudar_Numeros(somaanual)}}
+        rank = {"Pior_Valor":   [piorvalor,Mudar_Numeros(resultados[piorvalor])],
+                "Maior_Valor":  [maiorvalor,Mudar_Numeros(resultados[maiorvalor])],
+                "Soma_Anual":   Mudar_Numeros(somaanual)
+                }
 
         #print("RESUMO ANUAL :")
 
