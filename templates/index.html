@@ -8,17 +8,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
 </head>
 <body>
-    <div class="rank">
-
-        <h1>Rank Anual : </h1>
-
-        <p>O mês com o pior saldo foi:  <strong class="menor">   {{rank_anual["Pior_Valor"][0]}} (R$ {{rank_anual['Pior_Valor'][1]}})    </strong></p>
-        <p>O mês com o maior saldo foi: <strong class="maior">  {{rank_anual['Maior_Valor'][0]}} (R$ {{rank_anual['Maior_Valor'][1]}})  </strong></p>
-        <p>Saldo total do ano: R${{rank_anual['Soma_Anual']}} </p>
-
-    </div>
 
     <div class="tabela">
+        
         <table>
             <thead>
                 <tr>
@@ -42,10 +34,16 @@
     </div>
 
 
+    <div class="rank">
+
+        <h1>Rank Anual : </h1>
+
+        <p>O mês com o pior saldo foi:  <strong class="menor">   {{rank_anual["Pior_Valor"][0]}} (R$ {{rank_anual['Pior_Valor'][1]}})    </strong></p>
+        <p>O mês com o maior saldo foi: <strong class="maior">  {{rank_anual['Maior_Valor'][0]}} (R$ {{rank_anual['Maior_Valor'][1]}})  </strong></p>
+        <p>Saldo total do ano: R${{rank_anual['Soma_Anual']}} </p>
+
+    </div>
 
 
-
-
-<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 </body>
 </html>

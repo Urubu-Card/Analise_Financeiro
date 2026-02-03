@@ -140,13 +140,12 @@ class Busca:
 
             valores_tabela_html.append({
             'mes': self.meses[i-1],
-            'saldo': saldo_mes,
-            'receita': receita_mes,
-            'despesa': despesa_mes
+            'saldo': Mudar_Numeros(float(saldo_mes)),
+            'receita': Mudar_Numeros(float(receita_mes)),
+            'despesa': Mudar_Numeros(float(despesa_mes))
         })
 
             valores_tabela_terminal.append([saldo_mes, receita_mes, despesa_mes])
 
         #df = pd.DataFrame(valores_tabela,columns=labe,index=self.meses)
         return valores_tabela_html, valores_tabela_terminal
-

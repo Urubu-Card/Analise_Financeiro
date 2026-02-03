@@ -1,38 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap');
 
-*{
-    
+/* CSS Variables for easy theming */
+:root {
+    --primary-bg: #000000; /* Black background */
+    --text-color: #ffffff; /* White text */
+    --border-color: #ffffff; /* White borders */
+    --menor-color: #ff0000; /* Red for worst */
+    --maior-color: #00ff00; /* Green for best */
+    --shadow: rgba(255, 255, 255, 0.1); /* Subtle white shadow */
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: "Playwrite NZ Basic", cursive;
     font-weight: 200;
-    color: #ffffff;
-    font-size: 1,5rem;
+    color: var(--text-color);
+    font-size: 1.5rem; /* Fixed: was 1,5rem */
+    background-color: var(--primary-bg);
+    line-height: 1.6; /* Better readability */
+    padding: 20px; /* Add some global padding */
 }
-.rank{
-    border: 2px solid white;
+
+/* Rank Section */
+.rank {
+    border: 2px solid var(--border-color);
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
-    width: 50%;
-    
+    width: 80vw; /* Responsive width: scales with viewport */
+    max-width: 600px; /* Cap max width */
+    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-bg) 0%, #111 100%); /* Subtle gradient for depth */
+    box-shadow: 0 4px 8px var(--shadow); /* Soft shadow */
 }
 
-.tabela{
-    border: 2px solid white;
+.rank h1 {
+    font-size: 2rem; /* Larger heading */
+    margin-bottom: 15px;
+}
+
+.rank p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.menor {
+    color: var(--menor-color);
+    font-weight: 300; /* Slightly bolder for emphasis */
+}
+
+.maior {
+    color: var(--maior-color);
+    font-weight: 300;
+}
+
+/* Table Container */
+.tabela {
+    border: 2px solid var(--border-color);
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 20px auto;
+    width: 90vw; /* Responsive: scales with viewport */
+    max-width: 1000px;
+    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-bg) 0%, #111 100%); /* Matching gradient */
+    box-shadow: 0 4px 8px var(--shadow);
+    overflow-x: auto; /* Scrollable on small screens if needed */
+    display: flex;
+    justify-content: center;
     align-items: center;
-    width: 50%;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Cleaner table borders */
+    margin: 0 auto;
+}
+
+.tabela th, .tabela td {
+    padding: 15px; /* Increased padding for better spacing */
+    text-align: center; /* Center-align content */
+    border-bottom: 1px solid var(--border-color); /* Subtle row separators */
+}
+
+.tabela th {
+    font-weight: 300; /* Slightly bolder headers */
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.05); /* Very subtle header background */
+}
+
+.tabela tr:hover {
+    background-color: rgba(255, 255, 255, 0.05); /* Hover effect for rows */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem; /* Slightly smaller font on mobile */
+        padding: 10px;
+    }
     
+    .rank, .tabela {
+        width: 95vw; 
+        padding: 15px;
+    }
+    
+    .rank h1 {
+        font-size: 1.8rem;
+    }
+    
+    .tabela th, .tabela td {
+        padding: 10px;
+        font-size: 1rem; 
+    }
 }
 
-body{
-
-    background-color: black;
-}
-
-.menor{
-    color: red;
-}
-.maior{
-    color: rgb(0, 255, 0);
+@media (max-width: 480px) {
+    .rank, .tabela {
+        width: 100vw; 
+        margin: 10px 0;
+    }
+    
+    .tabela {
+        overflow-x: scroll; 
+    }
 }
