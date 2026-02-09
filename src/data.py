@@ -3,10 +3,12 @@ import pandas as pd
 from datetime import datetime as datatime # Fica mais facil de entender 
 import SA 
 
+
 def Mudar_Numeros(valor):
     'Arruma os numeros para ficarem com virgula e pontos de direitinho (Ex: 1.000,67).'
 
     return "{:,.2f}".format(valor).replace(',', 'v').replace('.', ',').replace('v', '.')
+
 
 class Busca:
 
@@ -20,59 +22,6 @@ class Busca:
                 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
         ]
 
-
-    def Mostrar_Saldo (self,nummes):
-
-        valores = []
-
-        for linha in self.dados:
-
-            data = datatime.strptime(linha['data'],"%Y-%m-%d")
-
-            if data.month == nummes:
-
-                valores.append(float(linha['valor']))
-
-        soma= sum(valores)
-
-        print(Fore.YELLOW+f"O Saldo do Final do mês foi de: R$ {Mudar_Numeros(soma)}")
-
-    def Mostrar_Receita(self,numes):
-
-        valores = []
-
-        for linha in self.dados :
-
-            data = datatime.strptime(linha['data'],"%Y-%m-%d")
-
-            if data.month == numes:
-
-                if float(linha['valor']) > 0:
-                    valores.append(float(linha['valor']))
-        
-
-        soma= sum(valores)
-
-        #print(Fore.GREEN+f"O Valor da Receita do mês foi de: R$ {Mudar_Numeros(soma)}")
-        return Mudar_Numeros(soma)
-
-    def Mostrar_Despesas(self,numes):
-
-        valores = []
-
-        for linha in self.dados:
-
-            data = datatime.strptime(linha['data'],"%Y-%m-%d")
-
-            if data.month == numes:
-
-                if float(linha['valor']) < 0:
-                    valores.append(float(linha['valor']))
-        
-
-        soma= sum(valores)
-
-        print(Fore.RED+f"O Valor da Despesa do mês foi de: R$ {Mudar_Numeros(soma)}")
 
     def RankSaldos(self):
 
@@ -114,6 +63,7 @@ class Busca:
 
         return rank
 
+
     def Tabela(self):
         
         labe = ['Saldo',"Receita","Despessas"]
@@ -147,5 +97,40 @@ class Busca:
 
             valores_tabela_terminal.append([saldo_mes, receita_mes, despesa_mes])
 
-        #df = pd.DataFrame(valores_tabela,columns=labe,index=self.meses)
         return valores_tabela_html, valores_tabela_terminal
+     
+
+class Print_Terminal():
+
+    def __init__(self,):
+        self.dados = Busca()
+
+
+    def Print_Rank(self):
+        rank = self.dados.RankSaldos()
+
+        print("RESUMO ANUAL :")
+
+        print(f"O mês com o maior saldo foi:    {rank['Maior_Valor'][0]} (R${rank['Maior_Valor'][1]})")
+
+        print(f"O mês com o pior saldo foi:     {rank['Pior_Valor'][0]} (R${rank['Pior_Valor'][1]})")
+
+        print(F"Saldo total do ano:             R${rank['Soma_Anual']}")
+
+
+    def Print_Tabela(self):
+
+        labe = ['Saldo',"Receita","Despessas"]
+
+        nao_utilizar , valores_tabela = self.dados.Tabela()
+
+        df = pd.DataFrame(valores_tabela,columns=labe,index=self.dados.meses)
+
+        print(df.map(Mudar_Numeros))
+   
+
+    def MostrarLog(self):
+        logs = self.dados.arquivos.Ler_Log()
+
+        for log in logs:
+            print(log)

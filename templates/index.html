@@ -9,12 +9,16 @@
 </head>
 <body>
 
+<div class="box">
+    
     <div class="tabela">
         
+        <h1>Tabela de Gastos : </h1>
+
         <table>
             <thead>
                 <tr>
-                    <th>Mês</th>
+                    <th class="col-mes">Mês</th>
                     <th>Saldo</th>
                     <th>Receita</th>
                     <th>Despesas</th>
@@ -23,10 +27,10 @@
             <tbody>
                 {% for linha in tabela %}
                 <tr>
-                    <td>{{ linha.mes }}</td>
-                    <td>{{ "%.2f"|format(linha.saldo) }}</td>
-                    <td>{{ "%.2f"|format(linha.receita) }}</td>
-                    <td>{{ "%.2f"|format(linha.despesa) }}</td>
+                    <td class="col-mes">{{ linha.mes }}</td>
+                    <td>{{ linha.saldo }}</td>
+                    <td>{{ linha.receita }}</td>
+                    <td>{{ linha.despesa }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -43,7 +47,7 @@
         <p>Saldo total do ano: R${{rank_anual['Soma_Anual']}} </p>
 
     </div>
-
+</div>
 
 </body>
 </html>

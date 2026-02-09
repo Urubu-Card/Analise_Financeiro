@@ -1,5 +1,7 @@
 from questionary import Style , questionary
 import data
+import os
+import time
 
 class App:
 
@@ -11,18 +13,8 @@ class App:
                 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
         ]
 
-        self.busca = data.Busca()
+        self.print = data.Print_Terminal()
 
-    def PrintRank(self,):
-        rank = self.busca.RankSaldos()
-
-        print("RESUMO ANUAL :")
-
-        print(f"O mês com o maior saldo foi: {rank['Maior_Valor'][0]} (R${rank['Maior_Valor'][1]})")
-
-        print(f"O mês com o pior saldo foi: {rank['Pior_Valor'][0]} (R${rank['Pior_Valor'][1]})")
-
-        print(F"Saldo total do ano: R${rank['Soma_Anual']}")
 
     def Menu(self):
         opcoes = ["[1] Adicionar dados",
@@ -34,7 +26,6 @@ class App:
 
         
         custom_style = Style([
-
             ('highlighted', 'fg:#673ab7 bold'), # opção selecionada
             ('selected', 'fg:#cc5454'),         # opção escolhida
             
@@ -44,10 +35,10 @@ class App:
                                     choices=opcoes,
                                     style=custom_style,
                                     instruction="(utilize as setas)",
-                                    
                                     ).ask()
 
         return escolha
+
 
     def Voltar_Menu(self,):
         menuresposta = questionary.select(
@@ -63,11 +54,8 @@ class App:
         while True:
             escolha = self.Menu()
 
-
-
             if escolha ==   "[2] Mostrar tabela":
-
-                self.busca.Tabela()
+                self.print.Print_Tabela()
                 menuresp = self.Voltar_Menu()
         
                 if menuresp == "Sim":
@@ -76,7 +64,8 @@ class App:
                     break
             
             elif escolha==  "[3] Mostrar Rank":
-                self.PrintRank()
+
+                self.print.Print_Rank()
                 menuresp = self.Voltar_Menu()
         
                 if menuresp == "Sim":
@@ -85,28 +74,18 @@ class App:
                     break
             
             elif escolha =="[4] Abrir Log de erros":
-                break
+                self.print.MostrarLog()
+                menuresp = self.Voltar_Menu()
+
+                if menuresp == "Sim":
+                    continue
+                else:
+                    break
 
             elif escolha =="[5] Sair":
+                os.system("cls")
                 break
 
 app = App()
 
 app.Rodar()
-
-
-
-#mescontagem = 1 
-        #for mes in self.meses:
-
-            #print(f"{Fore.RESET} {mes} : ")
-
-            #self.busca.Mostrar_Receita(mescontagem)
-
-            #self.busca.Mostrar_Despesas(mescontagem)
-
-            #self.busca.Mostrar_Saldo(mescontagem)
-
-            #print(Fore.WHITE+"------------------")
-            #mescontagem += 1
-        #self.busca.RankSaldos()

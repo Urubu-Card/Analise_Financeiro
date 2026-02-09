@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import os
 import data
+import webbrowser
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -19,5 +20,9 @@ def home():
 
     return render_template("index.html", rank_anual= rank , tabela = tabela)
 
+
 if __name__ == "__main__":
+    if not os.environ.get("WERKZEUG_RUN_MAIN"):
+        webbrowser.open("http://127.0.0.1:5000")
+
     app.run(debug=True)

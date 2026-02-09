@@ -71,39 +71,61 @@ body {
     background: linear-gradient(135deg, var(--primary-bg) 0%, #111 100%); /* Matching gradient */
     box-shadow: 0 4px 8px var(--shadow);
     overflow-x: auto; /* Scrollable on small screens if needed */
-    display: flex;
+    
     justify-content: center;
-    align-items: center;
+    
 }
 
-/* Table Styles */
+.box {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 table {
     width: 100%;
-    border-collapse: collapse; /* Cleaner table borders */
+    border-collapse: collapse; 
     margin: 0 auto;
+    
 }
 
 .tabela th, .tabela td {
-    padding: 15px; /* Increased padding for better spacing */
-    text-align: center; /* Center-align content */
-    border-bottom: 1px solid var(--border-color); /* Subtle row separators */
+    padding: 15px; 
+    text-align: center; 
+    border-bottom: 1px solid var(--border-color); 
+}
+.tabela h1{
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+.col-mes{
+    border-right: 1px solid var(--border-color); /* azul igual ao destaque */
+    padding-right: 20px;
 }
 
 .tabela th {
-    font-weight: 300; /* Slightly bolder headers */
+    font-weight: 300; 
     font-size: 1.3rem;
-    background-color: rgba(255, 255, 255, 0.05); /* Very subtle header background */
+    background-color: rgba(255, 255, 255, 0.05); 
 }
 
 .tabela tr:hover {
-    background-color: rgba(255, 255, 255, 0.05); /* Hover effect for rows */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: rgba(255, 255, 255, 0.05); 
+    transition: background-color 0.3s ease;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     body {
-        font-size: 1.2rem; /* Slightly smaller font on mobile */
+        font-size: 1.2rem; 
         padding: 10px;
     }
     
