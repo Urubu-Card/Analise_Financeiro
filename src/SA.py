@@ -2,6 +2,8 @@ import os
 from datetime import datetime as datatime # Fica mais facil de entender 
 import csv
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 def Mudar_Numeros(valor):
     'Arruma os numeros para ficarem com virgula e pontos de direitinho (Ex: 1.000,67).'
@@ -10,6 +12,8 @@ def Mudar_Numeros(valor):
 
 class Arquivos:
     'A class que analisa os dados .csv e verifica os dados para nenhum dado corrompido passe.'
+
+    
 
     def VerificarDados(self,dados):
         dadosbons = []
@@ -41,9 +45,10 @@ class Arquivos:
 
     def Escreve_Log(self,mensagem):
 
-        caminho_log = os.getcwd()+r"\logs"
+        caminho_log = fr"{BASE_DIR}/logs"
 
-        caminho_arqui = caminho_log+r"\erros.log"
+        print(caminho_log)
+        caminho_arqui = (caminho_log+r"\erros.log")
 
         if not os.path.exists(caminho_log):
             os.makedirs("logs")
@@ -56,7 +61,7 @@ class Arquivos:
 
     def Abrir_Arquivos(self,):
 
-        caminho = os.path.join(os.path.dirname(__file__), "..", "data")
+        caminho = os.path.join(BASE_DIR,"data")
 
 
         dados = []
@@ -87,6 +92,3 @@ class Arquivos:
 
         return linhas_error
 
-caminho = os.getcwd()+r"\logs"
-
-print(caminho)

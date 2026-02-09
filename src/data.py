@@ -98,7 +98,7 @@ class Busca:
             valores_tabela_terminal.append([saldo_mes, receita_mes, despesa_mes])
 
         return valores_tabela_html, valores_tabela_terminal
-     
+    
 
 class Print_Terminal():
 
